@@ -22,6 +22,11 @@
                     <input type="text" class="form-control" name="peso" id="produto" aria-describedby="emailHelp">
                     <div id="emailHelp" class="form-text">Digite aqui o peso do produto.</div>
                   </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Quantidade</label>
+                    <input type="text" class="form-control" name="quantidade" id="produto" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">Digite aqui a quantidade do produto.</div>
+                  </div>
 
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Categoria</label>
@@ -33,7 +38,7 @@
                     </select>
                     <div id="emailHelp" class="form-text">selecione aqui a categoria.</div>
                   </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Adicionar produto</button>
               </form>
         </div>
     

@@ -54,6 +54,7 @@ class ProdutosController extends Controller
             $novoProduto->nome = $request->nome;
             $novoProduto->preco = (float) $request->preco;
             $novoProduto->peso = (float) $request->peso;
+            $novoProduto->quantidade = (integer) $request->quantidade;
             $novoProduto->categoria_id = $request->categoria_id;
     
             $novoProduto->save();
@@ -115,6 +116,7 @@ class ProdutosController extends Controller
             $produto->nome = $request->nome;
             $produto->preco = $request->preco;
             $produto->peso = $request->peso;
+            $produto->quantidade = $request->quantidade;
             $produto->categoria_id = $request->categoria_id;
     
             $updatedProduto = $produto->update();

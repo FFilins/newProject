@@ -24,6 +24,7 @@
                     <th scope="col">Nome</th>
                     <th scope="col">Preco</th>
                     <th scope="col">Peso</th>
+                    <th scope="col">Quantidade</th>
                     <th scope="col">Categoria</th>
                     <th scope="col2">Actions</th>
                   </tr>
@@ -36,6 +37,7 @@
                             <td>{{$produto->nome}}</td>
                             <td>{{$produto->preco}}</td>
                             <td>{{$produto->peso}}</td>
+                            <td>{{$produto->quantidade}}</td>
                             <td>{{$produto->categoria()->first()->nome}}</td>
 
                             <td>

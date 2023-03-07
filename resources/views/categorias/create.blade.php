@@ -13,7 +13,7 @@
                   <div id="emailHelp" class="form-text">Digite aqui o nome da categoria.</div>
                 </div>
       
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Criar categoria</button>
               </form>
         </div>
     
