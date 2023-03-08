@@ -2,7 +2,12 @@
 
 @section('content')
 <div class="container">
-
+    @php
+    if(!isset($_SESSION)){
+      session_start();
+    }
+    @endphp
+    @if(isset($_SESSION['autenticado']) && $_SESSION['autenticado'] == true && $_SESSION['administrador'] == true)
     <div class="row">
         <div class="col-2">
 
@@ -13,8 +18,9 @@
             </form>
     
         </div>
-    
     </div>
+    @endif
+
     <div class="row">
         <div class="col-md-12">
             <table class="table">
@@ -22,7 +28,9 @@
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nome</th>
+                    @if(isset($_SESSION['autenticado']) && $_SESSION['autenticado'] == true && $_SESSION['administrador'] == true)
                     <th scope="col2">Actions</th>
+                    @endif
                   </tr>
                 </thead>
                 <tbody>
@@ -30,6 +38,9 @@
                     <tr>
                         <th scope="row">{{$categoria->id}}</th>
                         <td>{{$categoria->nome}}</td>
+
+                        @if(isset($_SESSION['autenticado']) && $_SESSION['autenticado'] == true && $_SESSION['administrador'] == true)
+
                         <td>
 
                             <div class="row">
@@ -49,7 +60,8 @@
                             </div>
                           
                         </td>
-                
+                        @endif
+                        
                       </tr>
                     @endforeach
                

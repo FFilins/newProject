@@ -24,6 +24,7 @@ Route::get('/login' , [AutenticacaoController::class, 'loginShow'])->name('login
 Route::post('/login/autenticar' , [AutenticacaoController::class, 'autenticar'])->name('login.autenticar');
 Route::get('/cadastro' , [AutenticacaoController::class, 'cadastroShow'])->name('cadastro.show');
 Route::post('/cadastro/create' , [AutenticacaoController::class, 'create'])->name('autenticacao.create');
+Route::get('/cadastro/sair' , [AutenticacaoController::class, 'sair'])->name('autenticacao.sair');
 
 
 Route::get('/categorias' , [CategoriasController::class, 'show'])->name('categorias.show');

@@ -14,7 +14,9 @@
 </head>
 <body>
 @php
-    session_start()
+    if(!isset($_SESSION)){
+      session_start();
+    }
 @endphp
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -33,16 +35,18 @@
             <li class="nav-item">
               <a class="nav-link" href="{{route('categorias.show')}}">Categorias</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('login.show')}}">login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('cadastro.show')}}">cadastrar</a>
-            </li>
+            @if(!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] != true)
+              <li class="nav-item">
+                <a class="nav-link" href="{{route('login.show')}}">login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{route('cadastro.show')}}">cadastrar</a>
+              </li>
+            @endif
             @if(isset($_SESSION['autenticado']))
               @if($_SESSION['autenticado'] === true)
                 <li class="nav-item">
-                  <a class="nav-link" href="{{route('cadastro.show')}}">sair</a>
+                  <a class="nav-link" href="{{route('autenticacao.sair')}}">sair</a>
                 </li>
               @endif
             @endif

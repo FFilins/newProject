@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nome', 100); // VARCHAR 100 caracteres
             $table->string('email', 100);
             $table->char('senha', 32);
+            $table->boolean('administrador')->default(0);
             $table->timestamps();
         });
     }
